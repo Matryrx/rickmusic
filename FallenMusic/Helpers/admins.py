@@ -33,7 +33,7 @@ from .active import is_active_chat
 def admin_check(func: Callable) -> Callable:
     async def non_admin(_, message: Message):
         if not await is_active_chat(message.chat.id):
-            return await message.reply_text("ʙᴏᴛ ɪsɴ'ᴛ sᴛʀᴇᴀᴍɪɴɢ ᴏɴ ᴠɪᴅᴇᴏᴄʜᴀᴛ.")
+            return await message.reply_text("ɪ ɢᴀᴅᴀ ᴅɪ ᴏs.")
 
         if message.from_user.id in SUDOERS:
             return await func(_, message)
@@ -41,7 +41,7 @@ def admin_check(func: Callable) -> Callable:
         check = await app.get_chat_member(message.chat.id, message.from_user.id)
         if check.status not in [ChatMemberStatus.OWNER, ChatMemberStatus.ADMINISTRATOR]:
             return await message.reply_text(
-                "» ʏᴏᴜ'ʀᴇ ɴᴏᴛ ᴀɴ ᴀᴅᴍɪɴ ʙᴀʙʏ, ᴘʟᴇᴀsᴇ sᴛᴀʏ ɪɴ ʏᴏᴜʀ ʟɪᴍɪᴛs."
+                "» ᴜ ʙᴜᴋᴀɴ ᴀᴅᴍɪɴ, Jᴀᴅɪ ᴜ ɢᴀʙɪsᴀ ᴀᴛᴜʀ ɪ."
             )
 
         admin = (
@@ -51,7 +51,7 @@ def admin_check(func: Callable) -> Callable:
             return await func(_, message)
         else:
             return await message.reply_text(
-                "» ʏᴏᴜ ᴅᴏɴ'ᴛ ʜᴀᴠᴇ ᴘᴇʀᴍɪssɪᴏɴs ᴛᴏ ᴍᴀɴᴀɢᴇ ᴠɪᴅᴇᴏᴄʜᴀᴛs, ᴘʟᴇᴀsᴇ sᴛᴀʏ ɪɴ ʏᴏᴜʀ ʟɪᴍɪᴛs."
+                "» ᴜ ɢᴀᴅᴀ ᴀᴋsᴇs ᴏs, Jᴀᴅɪ ɪ ɢᴀʙɪsᴀ ᴘʟᴀʏ ʟᴀɢᴜ ʙᴜᴀᴛ ᴜ."
             )
 
     return non_admin
@@ -61,7 +61,7 @@ def admin_check_cb(func: Callable) -> Callable:
     async def cb_non_admin(_, query: CallbackQuery):
         if not await is_active_chat(query.message.chat.id):
             return await query.answer(
-                "ʙᴏᴛ ɪsɴ'ᴛ sᴛʀᴇᴀᴍɪɴɢ ᴏɴ ᴠɪᴅᴇᴏᴄʜᴀᴛ.", show_alert=True
+                "ɪ ɢᴀᴅᴀ ᴅɪ ᴏs.", show_alert=True
             )
 
         if query.from_user.id in SUDOERS:
@@ -73,7 +73,7 @@ def admin_check_cb(func: Callable) -> Callable:
             return
         if check.status not in [ChatMemberStatus.OWNER, ChatMemberStatus.ADMINISTRATOR]:
             return await query.answer(
-                "» ʏᴏᴜ'ʀᴇ ɴᴏᴛ ᴀɴ ᴀᴅᴍɪɴ ʙᴀʙʏ, ᴘʟᴇᴀsᴇ sᴛᴀʏ ɪɴ ʏᴏᴜʀ ʟɪᴍɪᴛs.",
+                "» ᴜ ʙᴜᴋᴀɴ ᴀᴅᴍɪɴ, Jᴀᴅɪ ᴜ ɢᴀʙɪsᴀ ᴀᴛᴜʀ ɪ.",
                 show_alert=True,
             )
 
@@ -84,7 +84,7 @@ def admin_check_cb(func: Callable) -> Callable:
             return await func(_, query)
         else:
             return await query.answer(
-                "» ʏᴏᴜ ᴅᴏɴ'ᴛ ʜᴀᴠᴇ ᴘᴇʀᴍɪssɪᴏɴs ᴛᴏ ᴍᴀɴᴀɢᴇ ᴠɪᴅᴇᴏᴄʜᴀᴛs, ᴘʟᴇᴀsᴇ sᴛᴀʏ ɪɴ ʏᴏᴜʀ ʟɪᴍɪᴛs.",
+                "» ᴜ ɢᴀᴅᴀ ᴀᴋsᴇs ᴏs, Jᴀᴅɪ ɪ ɢᴀʙɪsᴀ ᴘʟᴀʏ ʟᴀɢᴜ ʙᴜᴀᴛ ᴜ.",
                 show_alert=True,
             )
 

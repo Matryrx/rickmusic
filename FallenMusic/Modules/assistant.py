@@ -29,18 +29,18 @@ from FallenMusic import ASS_MENTION, LOGGER, SUDOERS, app, app2
 @app.on_message(filters.command(["asspfp", "setpfp"]) & SUDOERS)
 async def set_pfp(_, message: Message):
     if message.reply_to_message.photo:
-        fuk = await message.reply_text("» ᴄʜᴀɴɢɪɴɢ ᴀssɪsᴛᴀɴᴛ's ᴘʀᴏғɪʟᴇ ᴘɪᴄ...")
+        fuk = await message.reply_text("»  ᴍᴇɴɢɢᴀɴᴛɪ ғᴏᴛᴏ ᴀsɪsᴛᴀɴᴛ...")
         img = await message.reply_to_message.download()
         try:
             await app2.set_profile_photo(photo=img)
             return await fuk.edit_text(
-                f"» {ASS_MENTION} ᴘʀᴏғɪʟᴇ ᴘɪᴄ ᴄʜᴀɴɢᴇᴅ sᴜᴄᴄᴇssғᴜʟʟʏ."
+                f"» {ASS_MENTION} ʙᴇʀʜᴀsɪʟ ᴍᴇɴɢɢᴀɴᴛɪ ғᴏᴛᴏ."
             )
         except:
-            return await fuk.edit_text("» ғᴀɪʟᴇᴅ ᴛᴏ ᴄʜᴀɴɢᴇ ᴀssɪsᴛᴀɴᴛ's ᴘʀᴏғɪʟᴇ ᴘɪᴄ.")
+            return await fuk.edit_text("» ɢᴀɢᴀʟ ᴍᴇɴɢɢᴀɴᴛɪ ғᴏᴛᴏ.")
     else:
         await message.reply_text(
-            "» ʀᴇᴘʟʏ ᴛᴏ ᴀ ᴘʜᴏᴛᴏ ғᴏʀ ᴄʜᴀɴɢɪɴɢ ᴀssɪsᴛᴀɴᴛ's ᴘʀᴏғɪʟᴇ ᴘɪᴄ."
+            "» ʙᴀʟᴀs ғᴏᴛᴏ ᴜɴᴛᴜᴋ ᴍᴇɴɢɢᴀɴᴛɪɴʏᴀ ᴍᴇɴJᴀᴅɪ ᴘʀᴏғɪʟᴇ ʙᴀʀᴜ."
         )
 
 
@@ -50,11 +50,11 @@ async def set_pfp(_, message: Message):
         pfp = [p async for p in app2.get_chat_photos("me")]
         await app2.delete_profile_photos(pfp[0].file_id)
         return await message.reply_text(
-            "» sᴜᴄᴄᴇssғᴜʟʟʏ ᴅᴇʟᴇᴛᴇᴅ ᴀssɪsᴛᴀɴᴛ's ᴘʀᴏғɪʟᴇ ᴘɪᴄ."
+            "» ʙᴇʀʜᴀsɪʟ ᴍᴇɴɢʜᴀᴘᴜs ғᴏᴛᴏ ᴀsɪsᴛᴀɴᴛ."
         )
     except Exception as ex:
         LOGGER.error(ex)
-        await message.reply_text("» ғᴀɪʟᴇᴅ ᴛᴏ ᴅᴇʟᴇᴛᴇ ᴀssɪsᴛᴀɴᴛ's ᴘʀᴏғɪʟᴇ ᴘɪᴄ.")
+        await message.reply_text("» ɢᴀɢᴀʟ ᴍᴇɴɢʜᴀᴘᴜs ғᴏᴛᴏ ᴀsɪsᴛᴀɴᴛ.")
 
 
 @app.on_message(filters.command(["assbio", "setbio"]) & SUDOERS)
@@ -65,12 +65,12 @@ async def set_bio(_, message: Message):
             newbio = msg.text
             await app2.update_profile(bio=newbio)
             return await message.reply_text(
-                f"» {ASS_MENTION} ʙɪᴏ ᴄʜᴀɴɢᴇᴅ sᴜᴄᴄᴇssғᴜʟʟʏ."
+                f"» {ASS_MENTION} ʙɪᴏ ʙᴇʀʜᴀsɪʟ ᴅɪɢᴀɴᴛɪ."
             )
     elif len(message.command) != 1:
         newbio = message.text.split(None, 1)[1]
         await app2.update_profile(bio=newbio)
-        return await message.reply_text(f"» {ASS_MENTION} ʙɪᴏ ᴄʜᴀɴɢᴇᴅ sᴜᴄᴄᴇssғᴜʟʟʏ.")
+        return await message.reply_text(f"» {ASS_MENTION} ʙɪᴏ ʙᴇʀʜᴀsɪʟ ᴅɪɢᴀɴᴛɪ.")
     else:
         return await message.reply_text(
             "» ʙᴀʟᴀs ᴄʜᴀᴛ ᴀᴛᴀᴜ ʙᴇʀɪᴋᴀɴ sᴀᴛᴜ ᴛᴇxᴛ ᴜɴᴛᴜᴋ ᴍᴇɴɢɢᴀɴᴛɪɴʏᴀ ᴍᴇɴJᴀᴅɪ ʙɪᴏ ʙᴀʀᴜ."

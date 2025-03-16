@@ -29,7 +29,7 @@ from FallenMusic import ASS_MENTION, LOGGER, SUDOERS, app, app2
 @app.on_message(filters.command(["asspfp", "setpfp"]) & SUDOERS)
 async def set_pfp(_, message: Message):
     if message.reply_to_message.photo:
-        fuk = await message.reply_text("»  ᴍᴇɴɢɢᴀɴᴛɪ ғᴏᴛᴏ ᴀsɪsᴛᴀɴᴛ...")
+        fuk = await message.reply_text("» ᴍᴇɴɢɢᴀɴᴛɪ ғᴏᴛᴏ ᴀsɪsᴛᴀɴᴛ...")
         img = await message.reply_to_message.download()
         try:
             await app2.set_profile_photo(photo=img)

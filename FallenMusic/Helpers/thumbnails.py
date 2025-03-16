@@ -151,7 +151,7 @@ async def gen_thumb(videoid, user_id):
         try:
             draw.text(
                 (450, 25),
-                f"STARTED PLAYING",
+                f"ᴍᴇᴍᴜʟᴀɪ ᴘᴜᴛᴀʀᴀɴ",
                 fill="white",
                 stroke_width=3,
                 stroke_fill="grey",
@@ -296,7 +296,7 @@ async def gen_qthumb(videoid, user_id):
         try:
             draw.text(
                 (455, 25),
-                "ADDED TO QUEUE",
+                "ᴍᴇɴᴀᴍʙᴀʜᴋᴀɴ ᴋᴇ ᴛʀᴀᴄᴋ",
                 fill="white",
                 stroke_width=5,
                 stroke_fill="black",

@@ -35,7 +35,7 @@ from FallenMusic.Helpers import get_readable_time
 @app.on_message(filters.command("ping"))
 async def ping_fallen(_, message: Message):
     hmm = await message.reply_photo(
-        photo=config.PING_IMG, caption=f"{BOT_NAME} ɪs ᴘɪɴɢɪɴɢ..."
+        photo=config.PING_IMG, caption=f"{BOT_NAME} ᴀᴜ ᴀʜ..."
     )
     upt = int(time.time() - StartTime)
     cpu = psutil.cpu_percent(interval=0.5)
@@ -48,7 +48,7 @@ async def ping_fallen(_, message: Message):
     await hmm.edit_text(
         f"""➻ ᴩᴏɴɢ : `{resp}ᴍs`
 
-<b><u>{BOT_NAME} sʏsᴛᴇᴍ sᴛᴀᴛs :</u></b>
+<b><u>{BOT_NAME} sᴛᴀᴛᴜs sɪsᴛᴇᴍ :</u></b>
 
 ๏ **ᴜᴩᴛɪᴍᴇ :** {uptime}
 ๏ **ʀᴀᴍ :** {mem}
@@ -59,8 +59,8 @@ async def ping_fallen(_, message: Message):
                 [
                     InlineKeyboardButton("❄ sᴜᴘᴘᴏʀᴛ ❄", url=config.SUPPORT_CHAT),
                     InlineKeyboardButton(
-                        "✨ sᴏᴜʀᴄᴇ ✨",
-                        url="https://github.com/AnonymousX1025/FallenMusic",
+                        "✨ ʙJɪᴇʀ ✨",
+                        url="https://t.me/riaesc",
                     ),
                 ],
             ]

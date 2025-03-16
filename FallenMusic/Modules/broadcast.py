@@ -32,14 +32,14 @@ from FallenMusic import app, app2
 
 @app.on_message(filters.command("broadcast") & filters.user(OWNER_ID))
 async def broadcast(_, message: Message):
-    brep = await message.reply_text("sᴛᴀʀᴛᴇᴅ ᴀssɪsᴛᴀɴᴛ ʙʀᴏᴀᴅᴄᴀsᴛ...")
+    brep = await message.reply_text("ᴍᴇᴍᴜʟᴀɪ ᴀsɪsᴛᴀɴᴛ ʙᴄ...")
     if message.reply_to_message:
         x = message.reply_to_message.id
         y = message.chat.id
     else:
         if len(message.command) < 2:
             return await message.reply_text(
-                "**ᴇxᴀᴍᴘʟᴇ:**\n\n/broadcast [ᴍᴇssᴀɢᴇ] ᴏʀ [ʀᴇᴘʟʏ ᴛᴏ ᴀ ᴍᴇssᴀɢᴇ]"
+                "**ᴇxᴀᴍᴘʟᴇ:**\n\n/broadcast [ᴘᴇsᴀɴ] ᴀᴛᴀᴜ [ᴀᴛᴀᴜ ʀᴇᴘʟᴀʏ ᴘᴇsᴀɴ]"
             )
         query = message.text.split(None, 1)[1]
     sent = 0
@@ -60,6 +60,6 @@ async def broadcast(_, message: Message):
         except Exception:
             continue
     try:
-        await brep.edit_text(f"**ʙʀᴏᴀᴅᴄᴀsᴛᴇᴅ ᴍᴇssᴀɢᴇ ɪɴ {sent} ᴄʜᴀᴛs.**")
+        await brep.edit_text(f"**ᴍᴇɴɢɪʀɪᴍ ʙᴄ {sent} ᴄʜᴀᴛ.**")
     except:
-        await message.reply_text(f"**ʙʀᴏᴀᴅᴄᴀsᴛᴇᴅ ᴍᴇssᴀɢᴇ ɪɴ {sent} ᴄʜᴀᴛs.**")
+        await message.reply_text(f"**ᴍᴇɴɢɪʀɪᴍ ʙᴄ {sent} ᴄʜᴀᴛs.**")

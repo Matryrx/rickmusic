@@ -39,7 +39,7 @@ from FallenMusic.Modules import ALL_MODULES
 @app.on_message(filters.command(["stats", "sysstats"]) & SUDOERS)
 async def sys_stats(_, message: Message):
     sysrep = await message.reply_text(
-        f"ɢᴇᴛᴛɪɴɢ {BOT_NAME} sʏsᴛᴇᴍ sᴛᴀᴛs, ɪᴛ'ʟʟ ᴛᴀᴋᴇ ᴀ ᴡʜɪʟᴇ..."
+        f"ᴍᴇɴᴅᴀᴘᴀᴛᴋᴀɴ sᴛᴀᴛᴜs sɪsᴛᴇᴍ {BOT_NAME}, ᴛᴜɴɢɢᴜ sᴇʙᴇɴᴛᴀʀ..."
     )
     try:
         await message.delete()
@@ -63,7 +63,7 @@ async def sys_stats(_, message: Message):
         else:
             cpu_freq = f"{round(cpu_freq, 2)}ᴍʜᴢ"
     except:
-        cpu_freq = "ғᴀɪʟᴇᴅ ᴛᴏ ғᴇᴛᴄʜ"
+        cpu_freq = "ɢᴀɢᴀʟ ᴜɴᴛᴜᴋ ᴍᴇʟɪʜᴀᴛ"
     hdd = psutil.disk_usage("/")
     total = hdd.total / (1024.0**3)
     total = str(total)
@@ -76,37 +76,37 @@ async def sys_stats(_, message: Message):
 
     await sysrep.edit_text(
         f"""
-➻ <u>**{BOT_NAME} sʏsᴛᴇᴍ sᴛᴀᴛs**</u>
+➻ <u>**{BOT_NAME} sᴛᴀᴛᴜs sɪsᴛᴇᴍ**</u>
 
 **ᴩʏᴛʜᴏɴ :** {pyver.split()[0]}
 **ᴩʏʀᴏɢʀᴀᴍ :** {pyrover}
 **ᴩʏ-ᴛɢᴄᴀʟʟs :** {pytgver}
-**sᴜᴅᴏᴇʀs :** `{sudoers}`
-**ᴍᴏᴅᴜʟᴇs :** `{mod}`
+**sᴜᴅᴏ :** `{sudoers}`
+**ᴍᴏᴅᴜʟ :** `{mod}`
 
 **ɪᴘ :** {ip_address}
 **ᴍᴀᴄ :** {mac_address}
 **ʜᴏsᴛɴᴀᴍᴇ :** {hostname}
 **ᴘʟᴀᴛғᴏʀᴍ :** {sp}
 **ᴘʀᴏᴄᴇssᴏʀ :** {processor}
-**ᴀʀᴄʜɪᴛᴇᴄᴛᴜʀᴇ :** {architecture}
-**ᴘʟᴀᴛғᴏʀᴍ ʀᴇʟᴇᴀsᴇ :** {platform_release}
-**ᴘʟᴀᴛғᴏʀᴍ ᴠᴇʀsɪᴏɴ :** {platform_version}
+**ᴀʀsɪᴛᴇᴋᴛᴜʀ :** {architecture}
+**ᴜᴘᴅᴀᴛᴇ :** {platform_release}
+**ᴠᴇʀsɪ :** {platform_version}
 
-        <b><u>sᴛᴏʀᴀɢᴇ</b><u/>
-**ᴀᴠᴀɪʟᴀʙʟᴇ :** {total[:4]} ɢɪʙ
-**ᴜsᴇᴅ :** {used[:4]} ɢɪʙ
-**ғʀᴇᴇ :** {free[:4]} ɢɪʙ
+        <b><u>ᴘᴇɴʏɪᴍᴘᴀɴᴀɴ</b><u/>
+**ᴛᴇʀsᴇᴅɪᴀ :** {total[:4]} ɢɪʙ
+**ᴅɪᴘᴀᴋᴀɪ :** {used[:4]} ɢɪʙ
+**ᴋᴏsᴏɴɢ :** {free[:4]} ɢɪʙ
 
 **ʀᴀᴍ :** {ram}
-**ᴩʜʏsɪᴄᴀʟ ᴄᴏʀᴇs :** {p_core}
+**ɪɴᴛɪ ᴄᴏʀᴇ :** {p_core}
 **ᴛᴏᴛᴀʟ ᴄᴏʀᴇs :** {t_core}
-**ᴄᴩᴜ ғʀᴇǫᴜᴇɴᴄʏ :** {cpu_freq}""",
+**ғʀᴇᴋᴜᴇɴsɪ ᴄᴘᴜ :** {cpu_freq}""",
         reply_markup=InlineKeyboardMarkup(
             [
                 [
                     InlineKeyboardButton(
-                        text="ᴄʟᴏsᴇ",
+                        text="ᴛᴜᴛᴜᴘ",
                         callback_data=f"forceclose abc|{message.from_user.id}",
                     ),
                 ]

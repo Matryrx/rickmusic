@@ -39,7 +39,7 @@ async def inline_query_handler(_, query):
             await app.answer_inline_query(
                 query.id,
                 results=answers,
-                switch_pm_text="ᴛʏᴘᴇ sᴏᴍᴇᴛʜɪɴɢ ᴛᴏ sᴇᴀʀᴄʜ ᴏɴ ʏᴏᴜᴛᴜʙᴇ...",
+                switch_pm_text="ᴋᴇᴛɪᴋ ᴀᴘᴀ ʏᴀɴɢ ᴍᴀᴜ ᴜ ᴄᴀʀɪ ᴅɪ ʏᴏᴜᴛᴜʙᴇ...",
                 cache_time=10,
             )
         except:
@@ -68,14 +68,14 @@ async def inline_query_handler(_, query):
                 ]
             )
             searched_text = f"""
-✨ **ᴛɪᴛʟᴇ :** [{title}]({link})
+✨ **ᴅᴇsᴋʀɪᴘsɪ :** [{title}]({link})
 
-⏳ **ᴅᴜʀᴀᴛɪᴏɴ :** `{duration}`ᴍɪɴᴜᴛᴇs
-👀 **ᴠɪᴇᴡs :** `{views}`
-⏰ **ᴩᴜʙʟɪsʜᴇᴅ ᴏɴ :** {published}
+⏳ **ᴅᴜʀᴀsɪ :** `{duration}`ᴍɪɴᴜᴛᴇs
+👀 **ᴘᴇɴᴏɴᴛᴏɴ :** `{views}`
+⏰ **ᴅɪᴘᴜʙʟɪᴋᴀsɪ ᴏʟᴇʜ :** {published}
 🎥 **ᴄʜᴀɴɴᴇʟ :** [{channel}]({channellink})
 
-<u>💖 **sᴇᴀʀᴄʜ ᴩᴏᴡᴇʀᴇᴅ ʙʏ {BOT_NAME}**</u>"""
+<u>💖 **ᴛᴀʏᴀɴɢᴀɴ ᴅɪʟᴀᴋᴜᴋᴀɴ ᴏʟᴇʜ {BOT_NAME}**</u>"""
             answers.append(
                 InlineQueryResultPhoto(
                     photo_url=thumbnail,

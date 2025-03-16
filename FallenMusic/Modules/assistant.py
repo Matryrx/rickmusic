@@ -73,7 +73,7 @@ async def set_bio(_, message: Message):
         return await message.reply_text(f"» {ASS_MENTION} ʙɪᴏ ᴄʜᴀɴɢᴇᴅ sᴜᴄᴄᴇssғᴜʟʟʏ.")
     else:
         return await message.reply_text(
-            "» ʀᴇᴘʟʏ ᴛᴏ ᴀ ᴍᴇssᴀɢᴇ ᴏʀ ɢɪᴠᴇ sᴏᴍᴇ ᴛᴇxᴛ ᴛᴏ sᴇᴛ ɪᴛ ᴀs ᴀssɪsᴛᴀɴᴛ's ʙɪᴏ."
+            "» ʙᴀʟᴀs ᴄʜᴀᴛ ᴀᴛᴀᴜ ʙᴇʀɪᴋᴀɴ sᴀᴛᴜ ᴛᴇxᴛ ᴜɴᴛᴜᴋ ᴍᴇɴɢɢᴀɴᴛɪɴʏᴀ ᴍᴇɴJᴀᴅɪ ʙɪᴏ ʙᴀʀᴜ."
         )
 
 
@@ -85,13 +85,13 @@ async def set_name(_, message: Message):
             name = msg.text
             await app2.update_profile(first_name=name)
             return await message.reply_text(
-                f"» {ASS_MENTION} ɴᴀᴍᴇ ᴄʜᴀɴɢᴇᴅ sᴜᴄᴄᴇssғᴜʟʟʏ."
+                f"» {ASS_MENTION} ɴᴀᴍᴀ ʙᴇʀʜᴀsɪʟ ᴅɪɢᴀɴᴛɪ."
             )
     elif len(message.command) != 1:
         name = message.text.split(None, 1)[1]
         await app2.update_profile(first_name=name, last_name="")
-        return await message.reply_text(f"» {ASS_MENTION} ɴᴀᴍᴇ ᴄʜᴀɴɢᴇᴅ sᴜᴄᴄᴇssғᴜʟʟʏ.")
+        return await message.reply_text(f"» {ASS_MENTION} ɴᴀᴍᴀ ʙᴇʀʜᴀsɪʟ ᴅɪɢᴀɴᴛɪ.")
     else:
         return await message.reply_text(
-            "» ʀᴇᴘʟʏ ᴛᴏ ᴀ ᴍᴇssᴀɢᴇ ᴏʀ ɢɪᴠᴇ sᴏᴍᴇ ᴛᴇxᴛ ᴛᴏ sᴇᴛ ɪᴛ ᴀs ᴀssɪsᴛᴀɴᴛ's ɴᴇᴡ ɴᴀᴍᴇ."
+            "» ʙᴀʟᴀs ᴄʜᴀᴛ ᴀᴛᴀᴜ ʙᴇʀɪᴋᴀɴ sᴀᴛᴜ ᴛᴇxᴛ ᴜɴᴛᴜᴋ ᴍᴇɴɢɢᴀɴᴛɪɴʏᴀ ᴍᴇɴJᴀᴅɪ ɴᴀᴍᴀ ʙᴀʀᴜ."
         )

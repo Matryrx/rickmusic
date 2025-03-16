@@ -55,16 +55,16 @@ async def song(_, message: Message):
     except Exception as ex:
         LOGGER.error(ex)
         return await m.edit_text(
-            f"ғᴀɪʟᴇᴅ ᴛᴏ ғᴇᴛᴄʜ ᴛʀᴀᴄᴋ ғʀᴏᴍ ʏᴛ-ᴅʟ.\n\n**ʀᴇᴀsᴏɴ :** `{ex}`"
+            f"ɢᴀɢᴀʟ ᴍᴇɴᴅᴀᴘᴀᴛᴋᴀɴ ᴋᴜᴇʀɪ ᴅᴀʀɪ ʏᴏᴜᴛᴜʙᴇ.\n\n**ʀᴇᴀᴋsɪ :** `{ex}`"
         )
 
-    await m.edit_text("» ᴅᴏᴡɴʟᴏᴀᴅɪɴɢ sᴏɴɢ,\n\nᴘʟᴇᴀsᴇ ᴡᴀɪᴛ...")
+    await m.edit_text("» ᴍᴇᴍᴜᴛᴀʀ ʟᴀɢᴜ,\n\nᴛᴜɴɢɢᴜ sᴇʙᴇɴᴛᴀʀ...")
     try:
         with yt_dlp.YoutubeDL(ydl_opts) as ydl:
             info_dict = ydl.extract_info(link, download=False)
             audio_file = ydl.prepare_filename(info_dict)
             ydl.process_info(info_dict)
-        rep = f"☁️ **ᴛɪᴛʟᴇ :** [{title[:23]}]({link})\n⏱️ **ᴅᴜʀᴀᴛɪᴏɴ :** `{duration}`\n🥀 **ᴜᴘʟᴏᴀᴅᴇᴅ ʙʏ :** {BOT_MENTION}"
+        rep = f"☁️ **ɪɴғᴏʀᴍᴀsɪ :** [{title[:23]}]({link})\n⏱️ **ᴅᴜʀᴀsɪ :** `{duration}`\n🥀 **ᴅɪᴘᴜʙʟɪᴋᴀsɪ ᴏʟᴇʜ :** {BOT_MENTION}"
         secmul, dur, dur_arr = 1, 0, duration.split(":")
         for i in range(len(dur_arr) - 1, -1, -1):
             dur += int(dur_arr[i]) * secmul
@@ -91,7 +91,7 @@ async def song(_, message: Message):
             )
             if message.chat.type != ChatType.PRIVATE:
                 await message.reply_text(
-                    "ᴘʟᴇᴀsᴇ ᴄʜᴇᴄᴋ ʏᴏᴜʀ ᴘᴍ, sᴇɴᴛ ᴛʜᴇ ʀᴇǫᴜᴇsᴛᴇᴅ sᴏɴɢ ᴛʜᴇʀᴇ."
+                    "ᴄᴇᴋ ʀᴄ ᴜ, ᴜᴅᴀʜ ɪ ᴋɪʀɪᴍ ᴅɪsᴀɴᴀ ʟɪɴᴋɴʏᴀ."
                 )
         except:
             start_butt = InlineKeyboardMarkup(
@@ -105,12 +105,12 @@ async def song(_, message: Message):
                 ]
             )
             return await m.edit_text(
-                text="ᴄʟɪᴄᴋ ᴏɴ ᴛʜᴇ ʙᴜᴛᴛᴏɴ ʙᴇʟᴏᴡ ᴀɴᴅ sᴛᴀʀᴛ ᴍᴇ ғᴏʀ ᴅᴏᴡɴʟᴏᴀᴅɪɴɢ sᴏɴɢs.",
+                text="ᴋʟɪᴋ ᴛᴏᴍʙᴏʟ ᴅᴀɴ ᴘᴇɴᴄᴇᴛ sᴛᴀʀᴛ ᴜɴᴛᴜᴋ ᴅᴏᴡɴʟᴏᴀᴅ.",
                 reply_markup=start_butt,
             )
         await m.delete()
     except:
-        return await m.edit_text("ғᴀɪʟᴇᴅ ᴛᴏ ᴜᴘʟᴏᴀᴅ ᴀᴜᴅɪᴏ ᴏɴ ᴛᴇʟᴇɢʀᴀᴍ sᴇʀᴠᴇʀs.")
+        return await m.edit_text("ɢᴀɢᴀʟ ᴍᴇɴɢᴜᴘʟᴏᴀᴅ ᴀᴜᴅɪᴏ ᴅᴀʀɪ ᴛᴇʟᴇɢʀᴀᴍ sᴇʀᴠᴇʀ.")
 
     try:
         os.remove(audio_file)

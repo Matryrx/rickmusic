@@ -144,7 +144,7 @@ async def play(_, message: Message):
     if audio:
         if round(audio.duration / 60) > DURATION_LIMIT:
             raise DurationLimitError(
-                f"» ᴍᴀᴀғ, ᴜ ʀᴇǫᴜᴇsᴛ ᴋᴜᴇʀɪ ʟᴇʙɪʜ ᴘᴀɴJᴀɴɢ ᴅᴀʀɪ ʙᴀᴛᴀs  {DURATION_LIMIT} Jᴀᴅɪ ᴍᴀᴀғ ɪ ɢᴀʙɪsᴀ ᴍᴜʟᴀɪ {BOT_NAME}."
+                f"» ᴍᴀᴀғ, ᴜ ʀᴇǫᴜᴇsᴛ ᴋᴜᴇʀɪ ʟᴇʙɪʜ ᴘᴀɴJᴀɴɢ ᴅᴀʀɪ ʙᴀᴛᴀs {DURATION_LIMIT} Jᴀᴅɪ ᴍᴀᴀғ ɪ ɢᴀʙɪsᴀ ᴍᴜʟᴀɪ {BOT_NAME}."
             )
 
         file_name = get_file_name(audio)
@@ -173,7 +173,7 @@ async def play(_, message: Message):
 
         if (dur / 60) > DURATION_LIMIT:
             return await fallen.edit_text(
-                f"» ᴍᴀᴀғ, ᴜ ʀᴇǫᴜᴇsᴛ ᴋᴜᴇʀɪ ʟᴇʙɪʜ ᴘᴀɴJᴀɴɢ ᴅᴀʀɪ ʙᴀᴛᴀs  {DURATION_LIMIT} Jᴀᴅɪ ᴍᴀᴀғ ɪ ɢᴀʙɪsᴀ ᴍᴜʟᴀɪ {BOT_NAME}."
+                f"» ᴍᴀᴀғ, ᴜ ʀᴇǫᴜᴇsᴛ ᴋᴜᴇʀɪ ʟᴇʙɪʜ ᴘᴀɴJᴀɴɢ ᴅᴀʀɪ ʙᴀᴛᴀs {DURATION_LIMIT} Jᴀᴅɪ ᴍᴀᴀғ ɪ ɢᴀʙɪsᴀ ᴍᴜʟᴀɪ {BOT_NAME}."
             )
         file_path = audio_dl(url)
     else:
@@ -199,7 +199,7 @@ async def play(_, message: Message):
 
         if (dur / 60) > DURATION_LIMIT:
             return await fallen.edit(
-                f"» ᴍᴀᴀғ, ᴜ ʀᴇǫᴜᴇsᴛ ᴋᴜᴇʀɪ ʟᴇʙɪʜ ᴘᴀɴJᴀɴɢ ᴅᴀʀɪ ʙᴀᴛᴀs  {DURATION_LIMIT} Jᴀᴅɪ ᴍᴀᴀғ ɪ ɢᴀʙɪsᴀ ᴍᴜʟᴀɪ {BOT_NAME}."
+                f"» ᴍᴀᴀғ, ᴜ ʀᴇǫᴜᴇsᴛ ᴋᴜᴇʀɪ ʟᴇʙɪʜ ᴘᴀɴJᴀɴɢ ᴅᴀʀɪ ʙᴀᴛᴀs {DURATION_LIMIT} Jᴀᴅɪ ᴍᴀᴀғ ɪ ɢᴀʙɪsᴀ ᴍᴜʟᴀɪ {BOT_NAME}."
             )
         file_path = audio_dl(url)
 

@@ -36,31 +36,31 @@ async def sudoadd(_, message: Message):
     if not message.reply_to_message:
         if len(message.command) != 2:
             return await message.reply_text(
-                "» ʀᴇᴘʟʏ ᴛᴏ ᴀ ᴜsᴇʀ's ᴍᴇssᴀɢᴇ ᴏʀ ɢɪᴠᴇ ᴜsᴇʀɴᴀᴍᴇ/ᴜsᴇʀ ɪᴅ."
+                "» ʙᴀʟᴀs ᴘᴇɴɢɢᴜɴᴀ/ ᴋᴀsɪʜ ɪᴅ ᴅɪᴀ."
             )
         user = message.text.split(None, 1)[1]
         if "@" in user:
             user = user.replace("@", "")
         user = await app.get_users(user)
         if int(user.id) in SUDOERS:
-            return await message.reply_text(f"» {user.mention} ɪs ᴀʟʀᴇᴀᴅʏ ᴀ sᴜᴅᴏ ᴜsᴇʀ.")
+            return await message.reply_text(f"» {user.mention} ᴅɪᴀ ᴜᴅᴀʜ ᴍᴀsᴜᴋ ᴜsᴇʀ sᴜᴅᴏ ᴀɴJɪʀ.")
         try:
             SUDOERS.add(int(user.id))
-            await message.reply_text(f"ᴀᴅᴅᴇᴅ {user.mention} ɪɴ sᴜᴅᴏ ᴜsᴇʀs ʟɪsᴛ.")
+            await message.reply_text(f"ᴍᴇɴᴀᴍʙᴀʜᴋᴀɴ {user.mention} ᴋᴇ ᴘᴇɴɢɢᴜɴᴀ sᴜᴅᴏ.")
         except:
-            return await message.reply_text("ғᴀɪʟᴇᴅ ᴛᴏ ᴀᴅᴅ ᴜsᴇʀ ɪɴ sᴜᴅᴏᴇʀs.")
+            return await message.reply_text("ɢᴀɢᴀʟ ᴜɴᴛᴜᴋ ᴍᴇɴᴀᴍʙᴀʜᴋᴀɴ ᴜsᴇʀ ᴋᴇ ᴘᴇɴɢɢᴜɴᴀ sᴜᴅᴏ.")
 
     if message.reply_to_message.from_user.id in SUDOERS:
         return await message.reply_text(
-            f"» {message.reply_to_message.from_user.mention} ɪs ᴀʟʀᴇᴀᴅʏ ᴀ sᴜᴅᴏ ᴜsᴇʀ."
+            f"» {message.reply_to_message.from_user.mention} ᴅɪᴀ ᴜᴅᴀʜ ᴍᴀsᴜᴋ ᴜsᴇʀ sᴜᴅᴏ ᴀɴJɪʀ."
         )
     try:
         SUDOERS.add(message.reply_to_message.from_user.id)
         await message.reply_text(
-            f"ᴀᴅᴅᴇᴅ {message.reply_to_message.from_user.mention} ɪɴ sᴜᴅᴏ ᴜsᴇʀs ʟɪsᴛ."
+            f"ᴍᴇɴᴀᴍʙᴀʜᴋᴀɴ {message.reply_to_message.from_user.mention} ᴋᴇ ᴘᴇɴɢɢᴜɴᴀ sᴜᴅᴏ."
         )
     except:
-        return await message.reply_text("ғᴀɪʟᴇᴅ ᴛᴏ ᴀᴅᴅ ᴜsᴇʀ ɪɴ sᴜᴅᴏᴇʀs.")
+        return await message.reply_text("ɢᴀɢᴀʟ ᴜɴᴛᴜᴋ ᴍᴇɴᴀᴍʙᴀʜᴋᴀɴ ᴜsᴇʀ ᴋᴇ ᴘᴇɴɢɢᴜɴᴀ sᴜᴅᴏ.")
 
 
 @app.on_message(filters.command(["delsudo", "rmsudo"]) & filters.user(OWNER_ID))
@@ -72,7 +72,7 @@ async def sudodel(_, message: Message):
     if not message.reply_to_message:
         if len(message.command) != 2:
             return await message.reply_text(
-                "» ʀᴇᴘʟʏ ᴛᴏ ᴀ ᴜsᴇʀ's ᴍᴇssᴀɢᴇ ᴏʀ ɢɪᴠᴇ ᴜsᴇʀɴᴀᴍᴇ/ᴜsᴇʀ ɪᴅ."
+                "» ʙᴀʟᴀs ᴘᴇɴɢɢᴜɴᴀ/ ᴋᴀsɪʜ ɪᴅ ᴅɪᴀ."
             )
         user = message.text.split(None, 1)[1]
         if "@" in user:
@@ -80,28 +80,28 @@ async def sudodel(_, message: Message):
         user = await app.get_users(user)
         if int(user.id) not in SUDOERS:
             return await message.reply_text(
-                f"» {user.mention} ɪs ɴᴏᴛ ɪɴ sᴜᴅᴏ ᴜsᴇʀs ʟɪsᴛ."
+                f"» {user.mention} ᴅɪᴀ ʙᴜᴋᴀɴ ᴜsᴇʀ sᴜᴅᴏ Jɪʀ."
             )
         try:
             SUDOERS.remove(int(user.id))
             return await message.reply_text(
-                f"» ʀᴇᴍᴏᴠᴇᴅ {user.mention} ғʀᴏᴍ sᴜᴅᴏ ᴜsᴇʀs ʟɪsᴛ."
+                f"» ᴍᴇʟᴇᴘᴀs {user.mention} ᴅᴀʀɪ ᴘᴇɴɢɢᴜɴᴀ sᴜᴅᴏ."
             )
         except:
-            return await message.reply_text(f"ғᴀɪʟᴇᴅ ᴛᴏ ʀᴇᴍᴏᴠᴇ ᴜsᴇʀ ғʀᴏᴍ sᴜᴅᴏᴇʀs.")
+            return await message.reply_text(f"ɢᴀɢᴀʟ ᴍᴇʟᴇᴘᴀs ᴜsᴇʀ ᴅᴀʀɪ sᴜᴅᴏ.")
     else:
         user_id = message.reply_to_message.from_user.id
         if int(user_id) not in SUDOERS:
             return await message.reply_text(
-                f"» {message.reply_to_message.from_user.mention} ɪs ɴᴏᴛ ɪɴ sᴜᴅᴏ ᴜsᴇʀs ʟɪsᴛ."
+                f"» {message.reply_to_message.from_user.mention} ᴅɪᴀ ʙᴜᴋᴀɴ ᴜsᴇʀ sᴜᴅᴏ Jɪʀ."
             )
         try:
             SUDOERS.remove(int(user_id))
             return await message.reply_text(
-                f"» ʀᴇᴍᴏᴠᴇᴅ {message.reply_to_message.from_user.mention} ғʀᴏᴍ sᴜᴅᴏ ᴜsᴇʀs ʟɪsᴛ."
+                f"» ᴍᴇʟᴇᴘᴀs {message.reply_to_message.from_user.mention} ᴅᴀʀɪ ᴘᴇɴɢɢᴜɴᴀ sᴜᴅᴏ."
             )
         except:
-            return await message.reply_text(f"ғᴀɪʟᴇᴅ ᴛᴏ ʀᴇᴍᴏᴠᴇ ᴜsᴇʀ ғʀᴏᴍ sᴜᴅᴏᴇʀs.")
+            return await message.reply_text(f"ɢᴀɢᴀʟ ᴍᴇʟᴇᴘᴀs ᴜsᴇʀ ᴅᴀʀɪ sᴜᴅᴏ.")
 
 
 @app.on_message(filters.command(["sudolist", "sudoers", "sudo"]))

@@ -41,7 +41,7 @@ async def skip_str(_, message: Message):
             await _clear_(message.chat.id)
             await pytgcalls.leave_group_call(message.chat.id)
             await message.reply_text(
-                text=f"➻ sᴛʀᴇᴀᴍ sᴋɪᴩᴩᴇᴅ 🥺\n│ \n└ʙʏ : {message.from_user.mention} 🥀\n\n**» ɴᴏ ᴍᴏʀᴇ ǫᴜᴇᴜᴇᴅ ᴛʀᴀᴄᴋs ɪɴ** {message.chat.title}, **ʟᴇᴀᴠɪɴɢ ᴠɪᴅᴇᴏᴄʜᴀᴛ.**",
+                text=f"➻ ᴛᴀʏᴀɴɢᴀɴ ᴅɪ sᴋɪᴘ 🥺\n│ \n└ᴏʟᴇʜ : {message.from_user.mention} 🥀\n\n**» ᴛɪᴅᴀᴋ ᴀᴅᴀ ᴛʀᴇᴋ ᴛᴇʀsᴇᴅɪᴀ** {message.chat.title}, **ᴛᴜʀᴜɴ ᴅᴀʀɪ ᴏs ᴀʜ.**",
                 reply_markup=close_key,
             )
         except:
@@ -66,12 +66,12 @@ async def skip_str(_, message: Message):
             return await pytgcalls.leave_group_call(message.chat.id)
 
         await message.reply_text(
-            text=f"➻ sᴛʀᴇᴀᴍ sᴋɪᴩᴩᴇᴅ 🥺\n│ \n└ʙʏ : {message.from_user.mention} 🥀",
+            text=f"➻ ᴛᴀʏᴀɴɢᴀɴ ᴅɪ sᴋɪᴘ 🥺\n│ \n└ʙʏ : {message.from_user.mention} 🥀",
             reply_markup=close_key,
         )
         img = await gen_thumb(videoid, user_id)
         return await message.reply_photo(
             photo=img,
-            caption=f"**➻ sᴛᴀʀᴛᴇᴅ sᴛʀᴇᴀᴍɪɴɢ**\n\n‣ **ᴛɪᴛʟᴇ :** [{title[:27]}](https://t.me/{BOT_USERNAME}?start=info_{videoid})\n‣ **ᴅᴜʀᴀᴛɪᴏɴ :** `{duration}` ᴍɪɴᴜᴛᴇs\n‣ **ʀᴇǫᴜᴇsᴛᴇᴅ ʙʏ :** {req_by}",
+            caption=f"**➻ ᴍᴇᴍᴜʟᴀɪ ᴛᴀʏᴀɴɢᴀɴ**\n\n‣ **ᴛɪᴛʟᴇ :** [{title[:27]}](https://t.me/{BOT_USERNAME}?start=info_{videoid})\n‣ **ᴅᴜʀᴀsɪ :** `{duration}` ᴍᴇɴɪᴛ\n‣ **ᴅɪᴍɪɴᴛᴀ ᴏʟᴇʜ :** {req_by}",
             reply_markup=buttons,
         )
